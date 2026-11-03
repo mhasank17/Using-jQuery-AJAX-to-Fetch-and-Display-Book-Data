@@ -1,0 +1,17 @@
+{
+    "success": true,
+    "source": "Hypothetical Books API",
+    "count": 10,
+    "books": [
+        { "id": 1, "title": "To Kill a Mockingbird", "author": "Harper Lee", "year": 1960, "genre": "Fiction" },
+        { "id": 2, "title": "1984", "author": "George Orwell", "year": 1949, "genre": "Dystopian" },
+        { "id": 3, "title": "The Great Gatsby", "author": "F. Scott Fitzgerald", "year": 1925, "genre": "Classic" },
+        { "id": 4, "title": "Pride and Prejudice", "author": "Jane Austen", "year": 1813, "genre": "Romance" },
+        { "id": 5, "title": "The Catcher in the Rye", "author": "J. D. Salinger", "year": 1951, "genre": "Fiction" },
+        { "id": 6, "title": "Brave New World", "author": "Aldous Huxley", "year": 1932, "genre": "Science Fiction" },
+        { "id": 7, "title": "The Hobbit", "author": "J. R. R. Tolkien", "year": 1937, "genre": "Fantasy" },
+        { "id": 8, "title": "Animal Farm", "author": "George Orwell", "year": 1945, "genre": "Political Satire" },
+        { "id": 9, "title": "The Alchemist", "author": "Paulo Coelho", "year": 1988, "genre": "Adventure" },
+        { "id": 10, "title": "Atomic Habits", "author": "James Clear", "year": 2018, "genre": "Self-Help" }
+    ]
+}

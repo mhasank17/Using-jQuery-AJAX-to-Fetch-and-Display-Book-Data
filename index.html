@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BookFinder — jQuery AJAX Books List</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>BookFinder</h1>
+            <p class="subtitle">Fetches real-time book data with jQuery <code>$.ajax()</code> from the <a href="https://openlibrary.org/" target="_blank" rel="noopener">OpenLibrary</a> API</p>
+        </header>
+
+        <div class="controls">
+            <select id="categorySelect" class="category-select"></select>
+            <button id="loadBooksBtn" class="btn">Load Books</button>
+        </div>
+
+        <div class="search">
+            <input type="text" id="searchInput" class="search-input" placeholder="Enter a book name…" autocomplete="off">
+            <button id="findBtn" class="btn btn-find">Find Book</button>
+        </div>
+
+        <div class="status-bar">
+            <span id="statusText" class="status"></span>
+        </div>
+
+        <ul id="bookList" class="book-list"></ul>
+
+        <div class="load-more-wrap">
+            <button id="loadMoreBtn" class="btn btn-more" hidden>Load More</button>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

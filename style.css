@@ -1,0 +1,240 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary: #6d28d9;
+    --primary-dark: #4c1d95;
+    --accent: #a78bfa;
+    --bg: #f5f3ff;
+    --card: #ffffff;
+    --text: #1e293b;
+    --muted: #64748b;
+    --border: #e9e5f5;
+    --shadow: 0 6px 18px rgba(109, 40, 217, 0.12);
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(160deg, #f5f3ff 0%, #faf8ff 55%, #ede9fe 100%);
+    color: var(--text);
+    min-height: 100vh;
+    background-attachment: fixed;
+}
+
+.container {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 2.5rem 1rem 3rem;
+}
+
+.header {
+    background: linear-gradient(135deg, #4c1d95 0%, #6d28d9 60%, #8b5cf6 100%);
+    color: #fff;
+    border-radius: 16px;
+    padding: 1.8rem 2rem;
+    box-shadow: var(--shadow);
+    margin-bottom: 1.5rem;
+}
+
+.header h1 {
+    font-size: 1.9rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+.subtitle {
+    margin-top: 0.4rem;
+    font-size: 0.92rem;
+    opacity: 0.9;
+}
+
+.subtitle a {
+    color: #e9d5ff;
+    text-decoration: underline;
+    font-weight: 600;
+}
+
+.header code {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 0.1rem 0.4rem;
+    border-radius: 6px;
+}
+
+.controls {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.3rem;
+}
+
+.category-select {
+    flex: 1;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 0.65rem 1rem;
+    font-size: 0.98rem;
+    font-family: inherit;
+    color: var(--text);
+    background: var(--card);
+    box-shadow: var(--shadow);
+    outline: none;
+    cursor: pointer;
+    transition: border-color 0.2s;
+}
+
+.category-select:focus {
+    border-color: var(--primary);
+}
+
+.status-bar {
+    min-height: 1.4rem;
+    margin-bottom: 1rem;
+}
+
+.btn {
+    background: var(--primary);
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    padding: 0.65rem 1.4rem;
+    font-size: 0.98rem;
+    font-weight: 600;
+    font-family: inherit;
+    cursor: pointer;
+    box-shadow: var(--shadow);
+    transition: transform 0.15s, background 0.2s;
+}
+
+.btn:hover {
+    background: var(--primary-dark);
+    transform: translateY(-2px);
+}
+
+.btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.status {
+    color: var(--muted);
+    font-size: 0.92rem;
+    font-weight: 600;
+}
+
+.search {
+    display: flex;
+    gap: 0.6rem;
+    margin-bottom: 1.3rem;
+}
+
+.load-more-wrap {
+    display: flex;
+    justify-content: center;
+    margin-top: 1.3rem;
+}
+
+.btn-more {
+    background: var(--accent);
+    color: var(--primary-dark);
+}
+
+.btn-more:hover {
+    background: #c4b5fd;
+}
+
+.search-input {
+    flex: 1;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 0.65rem 1rem;
+    font-size: 0.98rem;
+    font-family: inherit;
+    color: var(--text);
+    background: var(--card);
+    box-shadow: var(--shadow);
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.search-input:focus {
+    border-color: var(--primary);
+}
+
+.search-input::placeholder {
+    color: var(--muted);
+}
+
+.btn-find {
+    background: var(--accent);
+    color: var(--primary-dark);
+}
+
+.btn-find:hover {
+    background: #c4b5fd;
+}
+
+.book-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.book-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 0.9rem 1.2rem;
+    box-shadow: var(--shadow);
+    animation: fadeUp 0.35s ease both;
+}
+
+.book-cover {
+    width: 48px;
+    height: 72px;
+    object-fit: cover;
+    border-radius: 6px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    flex-shrink: 0;
+}
+
+.book-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.15rem;
+    min-width: 0;
+}
+
+.book-title {
+    font-size: 1.08rem;
+    font-weight: 700;
+    color: var(--primary-dark);
+}
+
+.book-author {
+    font-size: 0.95rem;
+    color: var(--text);
+}
+
+.book-meta {
+    font-size: 0.82rem;
+    color: var(--muted);
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
